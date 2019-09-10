@@ -2,10 +2,11 @@
 	"name": "vue-MlScroll",
 	"version": "1.0.0",
 	"description": "vue 滚动条插件",
+	"main": "dist/index.js",
 	"scripts": {
 		"dev": "rollup -m -c build/rollup.config.dev.js --watch",
 		"build": "rollup -m -c build/rollup.config.build.js",
-		"release": "rollup -c build/rollup.config.release.js"
+		"release": "npm run build && rollup -c build/rollup.config.release.js"
 	},
 	"keywords": "vue,scroll",
 	"devDependencies": {

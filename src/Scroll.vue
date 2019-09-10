@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'scroll',
+  name: 'ml-scroll',
   data() {
     return {};
   },

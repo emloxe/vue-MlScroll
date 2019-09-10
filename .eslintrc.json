@@ -14,9 +14,8 @@
     "jest": true
   },
   "globals": {
-    "echarts": true,
-    "twaver": "readonly",
-    "mono": "readonly"
+    "Vue": true,
+    "MlScroll": true
   },
   "rules": {
     "no-console": 0,

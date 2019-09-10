@@ -2,9 +2,42 @@
 <html>
 <head>
   <title>demo1</title>
+  <style type="text/css">
+    .body{
+      width: 500px;
+      height: 300px;
+      background: #ddd;
+    }
+    ul, li{
+      margin: 0;
+      list-style: none;
+    }
+  </style>
+  <script type="text/javascript" src="./lib/vue.js"></script>
+  <script type="text/javascript" src="../dist/index.js"></script>
 </head>
 <body>
-<script type="text/javascript" src="../dist/index.js"></script>
+  <div id="app">
+    <div class="body">
+      <ml-scroll ref="scroll">
+        <ul>
+          <li v-for="item in list">{{item}}</li>
+        </ul>
+      </ml-scroll>
+    </div>
+  </div>
+  <script type="text/javascript">
+    Vue.use(MlScroll);
 
+    new Vue({
+      el: '#app',
+      data: {
+        list: [...Array(20).keys()],
+      },
+      mounted() {
+        this.$refs.scroll.resizeBar();
+      },
+    });
+  </script>
 </body>
 </html>

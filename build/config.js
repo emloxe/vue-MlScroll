@@ -1,5 +1,5 @@
 const config = {
-  name: 'Scroll',
+  name: 'MlScroll',
 };
 
 export default config;
